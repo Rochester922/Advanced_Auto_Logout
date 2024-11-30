@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced Auto Logout</title>
+	<link href="../css/popup.css" rel="stylesheet" type="text/css" />
+	<style>
+		.chrome-icon{
+			float: left; 
+			padding-left:1em
+		}
+		.chrome-title{
+			padding-top:5px;
+		}
+		.main-content{
+			padding-left: 10px;
+			padding-right: 10px; 
+			padding-bottom: 82px;
+		}
+	</style>
+</head>
+
+<body  style="background:#FFFFFF">
+<p>
+<img src="../icons/icon32.png" class="chrome-icon" alt="Advanced Auto Logout">
+<h2 class="chrome-title"> &nbsp;Advanced Auto Logout</h2>
+</p>
+
+	<div class="main-content" class="gradientBoxesWithOuterShadows">
+	
+	
+			<div align="center">
+			<h2><strong>URL:</strong></h2> <input class="inputs" type="text" id="NameOfWebsites" value=""></br>
+			</div>
+			<div>
+			<div align="center" class="divBox">
+			<strong><h2>Enter Time in Minutes:</h2></strong> <input class="inputs" type="number" id="TimeInMins" min="0" step="10" value="0">
+			</br></br>
+				<a href="#" id="LogoutSpecific" class="myButtonGreen">Start Log Out Timer</a>
+			</div>
+			</div>
+			</br>
+			<div align="center">
+				<a href="#" id="AddToLogOutList" class="myButton">Add to Log out List</a>
+				<a href="#" id="RemoveToLogOutList" class="myButtonRed">Remove from Log out List</a>
+				<a href="#" id="LogoutAll" class="myButtonRed">Log out All</a>
+			</div>
+		</div>
+	
+	<script src="/js/background_popup.js"></script>
+</body>
+</html>

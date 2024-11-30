@@ -1,0 +1,46 @@
+{
+	"manifest_version": 3,
+
+	"name": "Advanced Auto Logout",
+	"description": "Logout from all the websites on single click",
+	"author": "Safety Redirector",
+	
+	"homepage_url": "http://safetyredirector.com/",
+	"version": "7.0.2",
+
+	"permissions": [ "storage", "cookies", "alarms", "webNavigation"	 ],
+
+	"host_permissions": [
+		"http://*/*",
+		"https://*/*"
+	],
+
+	"background": {
+		"service_worker": "js/background.js"
+	},
+
+	"action": {
+		"default_icon" : "icons/refresh.png",
+		"default_title" : "Advanced Auto Logout",
+		"default_popup": "pages/popup.html"
+	},
+
+	"icons": {
+		"16" : "icons/button.png",
+		"48" : "icons/icon48.png",
+		"128" : "icons/icon128.png"
+	},
+
+	"web_accessible_resources": [
+		{
+			"resources": [ "/icons/icon128.png" ],
+			"matches": [ "<all_urls>" ]
+		}
+	],
+
+	"options_page": "pages/options.html",
+
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self';"
+	}
+}

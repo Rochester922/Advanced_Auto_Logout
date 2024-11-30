@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced Auto Logout</title>
+	
+	<link href="../css/popup.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="width:360px;" class="VerticalAllignBody">
+<p>
+<img src="../icons/icon48.png" style="float: left;" alt="Advanced Auto Logout">
+<h1 style ="padding-top:5px;"> &nbsp;Advanced Auto Logout</h1>
+</p>
+<div style="display:none;">
+	<p><strong>Saftey Redirector Preferences:</strong><br>
+	<br>
+	
+ Protection Counter:
+    <select id="uTracking">
+      <option value="0">No Counter</option>
+      <option value="1">Enable Counter</option>
+      <option value="2">Enable Counter and Share</option>
+    </select>
+	</p>
+	<table width="100%" border="1">
+	  <tr>
+	    <td>Now you're able to track how many times Safety Redirector saves you! Anytime it redirects, kills a connection or corrects a typo it will add it to this counter. You have the option of having the counter showing up upon browser load or when clicking the eye.<br>
+          <br>
+        <strong>ALSO you have the option of sharing your statistics with us. The ONLY information we receive is the number of redirect (Malware/Typos) that Safety Redirector has made. No personal information is included. This information helps us a TON! Please consider enabling this feature. </strong></td>
+      </tr>
+</table>
+	<p><br/>
+	  <label>
+	    <input type="checkbox" id="showOn"> Show tracking stats on browser load.
+      </label>
+	  <br/><br/>
+	  <span style="font-size:x-small"><b>Note:</b> We do not collect personal or other information, except the number of redirects the extension did for you, against malware and typos.</span>
+	  <br/><br/>
+	  
+</p>
+
+	<button id="save">Save</button>
+	<div id="status" style="float:right"></div>
+</div>
+	<br/><br/>
+	<strong><h3>Auto Logout All WebSites on closing of Chrome</h3></strong>
+	<fieldset class="toggle">
+	  <input id="data-policy" type="checkbox" checked="checked" />
+	  <label for="data-policy">
+	  
+	  <div class="toggle-button" id="AllWebSItesLogout">
+		<div class="toggle-tab"></div>
+	  </div>
+	  </label>
+	</fieldset>
+	
+</div> 
+<div id='AutoLogoutListDiv'>
+<br/><strong><h3>Only Logout of the websites Below upon closing chrome<h3></strong><br/>
+<div style="padding: 10px;" class="divBoxOptions">
+   <!--<input type="button" name="btnSave" value="Save" id="btnSave" />  
+   <input type="button" value="Add More..." id="AddMore" /> -->
+   <input type="hidden" id="hdnListCount" />  
+   <input type="hidden" id="hdnTableState" />  
+   <table id="dataTable" width="350px" border="1">  
+     <tr>  
+       <th>WebSites List
+       </th>  
+       <th>Action  
+       </th>  
+     </tr>  
+   </table>  
+	<br/>
+		<div style="float:right" >
+		<a href="#" id="AddMore" class="myButtonsmall">Add More...</a>
+		<a href="#" id="btnSave" class="myButtonsmall">Save</a>
+		</div>
+		<br/><br/>
+	</div>
+	
+	</div>
+	
+	<br/><br/>
+	
+	
+	<script src="/js/options.js"></script>
+	<script src="/js/options_logout.js"></script>
+	
+</body>
+</html>
